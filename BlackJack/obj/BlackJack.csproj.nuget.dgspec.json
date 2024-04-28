@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gaega\\Github\\SnakeGame\\Snake\\Snake.csproj": {}
+    "C:\\Users\\gaega\\Desktop\\visual studio\\Snake\\BlackJack\\BlackJack.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gaega\\Github\\SnakeGame\\Snake\\Snake.csproj": {
+    "C:\\Users\\gaega\\Desktop\\visual studio\\Snake\\BlackJack\\BlackJack.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gaega\\Github\\SnakeGame\\Snake\\Snake.csproj",
-        "projectName": "Snake",
-        "projectPath": "C:\\Users\\gaega\\Github\\SnakeGame\\Snake\\Snake.csproj",
+        "projectUniqueName": "C:\\Users\\gaega\\Desktop\\visual studio\\Snake\\BlackJack\\BlackJack.csproj",
+        "projectName": "BlackJack",
+        "projectPath": "C:\\Users\\gaega\\Desktop\\visual studio\\Snake\\BlackJack\\BlackJack.csproj",
         "packagesPath": "C:\\Users\\gaega\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gaega\\Github\\SnakeGame\\Snake\\obj\\",
+        "outputPath": "C:\\Users\\gaega\\Desktop\\visual studio\\Snake\\BlackJack\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
