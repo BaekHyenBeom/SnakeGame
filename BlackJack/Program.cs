@@ -9,7 +9,7 @@
             Hand playerHand = new Hand(false);
             Hand dealerHand = new Hand(false);
 
-            bool drawCard = true;
+            bool drawCard = true;   // 플레이어가 카드를 받을지 말지 정하는 bool
 
             
             
@@ -23,37 +23,48 @@
             // 게임 진행 로직
             do  
             {
-                if (drawCard) { drawCard = Select(); }  // 카드 선택
+                if (playerHand.score < 21 && playerHand.softScore < 21 && drawCard) { drawCard = Select(); }  // 카드 선택 (이미 블랙잭일 경우나 카드를 선택하지 않았을 경우 넘어가기)
+                else { drawCard = false; }  // 자동 넘김이 작동되었을 경우 비활성화 전환
 
-                if (playerHand.score < 21 && drawCard)
+                if (drawCard)  // 플레이어가 버스트 되거나 카드 채우기를 멈추지 않았을 때
                 {
                     GetCard(playerHand);
                 }
 
-                if (dealerHand.isBurst || playerHand.isBurst || playerHand.score > 20 || playerHand.softScore > 20) { drawCard = false; }
+                if (playerHand.isBurst || playerHand.score > 20 || playerHand.softScore > 20) { drawCard = false; } // 딜러가 버스트되거나 플레이어가 블랙잭이 되거나 버스트 되었을 경우에는 카드 선택 비활성화
 
-                if (dealerHand.score < 17 && dealerHand.softScore < 17 && !playerHand.isBurst)
+                if (dealerHand.score < 17 && dealerHand.softScore < 17 && !playerHand.isBurst)  // 딜러는 17점 이상이면 더 이상 카드 드로우를 하지 않음
                 {
                     GetCard(dealerHand);
                 }
-                
-                
-            } while (dealerHand.score < 17 && dealerHand.softScore < 17 && !playerHand.isBurst || drawCard );
 
+                
+                if (dealerHand.score > 16 || dealerHand.softScore > 16)  // 딜러의 핸드가 17점 이상이라면
+                {
+                    if (dealerHand.isBurst) { drawCard = false; } // 딜러가 버스트인 경우 카드 드로우 비활성화
+                    if (dealerHand.softScore > 16) { dealerHand.SetSoftScore(); }    // 소프트스코어 판정일 경우 score 덮어쓰기
+                    if (dealerHand.score < playerHand.score || dealerHand.score < playerHand.softScore) { drawCard = false; }   // 플레이어할 때 플레이어가 높을 경우 드로우 카드 자동 비활성화
+                }
+                
+            } while (dealerHand.score < 17 && dealerHand.softScore < 17 && !playerHand.isBurst || drawCard ); // 딜러의 점수가 17점을 넘어가고, 플레이어가 카드 드로우를 비활성화하거나 (하지만 플레이어가 버스트 된다면 종료)
+
+            // 사용 가능한 소프트스코어가 존재한다면 
             if (playerHand.softScore > playerHand.score) { playerHand.SetSoftScore(); }
             if (dealerHand.softScore > dealerHand.score) { dealerHand.SetSoftScore(); }
 
             MatchEnd();
 
+            // 다시 시작할 건지 물어보는 코드
             isRetry = Retry();
 
+            // 서로의 패와 점수 현황을 보여주는 메서드
             void Board()
             {
                 Console.Clear();
                 Console.Write($"현재 딜러의 핸드 : ");
                 CardPrint(dealerHand.cards);
                 Console.WriteLine();
-                if (dealerHand.score == 21 || dealerHand.softScore == 21) { Console.Write($"딜러의 현재 점수 : "); Black(); Console.Write("블랙잭!"); Console.ResetColor(); }
+                if (dealerHand.score == 21 || dealerHand.softScore == 21) { Console.Write($"딜러의 현재 점수 : "); Black(); Console.WriteLine("블랙잭!"); Console.ResetColor(); }
                 else if (dealerHand.softScore > 0) { Console.Write($"딜러의 현재 점수 : {dealerHand.score} "); Console.WriteLine($"({dealerHand.softScore})"); }
                 else { Console.WriteLine($"딜러의 현재 점수 : {dealerHand.score}"); }
                 Console.WriteLine();
@@ -72,6 +83,7 @@
                 else { Console.WriteLine($"플레이어의 현재 점수 : {playerHand.score}"); }
             }
 
+            // 판 끝나고 호출되는 메서드
             void MatchEnd()
             {
                 if (playerHand.isBurst)
@@ -96,6 +108,7 @@
                 else { Console.WriteLine("플레이어의 패배입니다;"); }
             }
 
+            // 카드 출력을 위한 메서드
             void CardPrint(List<string> cards)
             {
                 foreach (string _ in cards)
@@ -143,6 +156,7 @@
                 }
             }
 
+            // 각 핸드의 카드를 가져오게 하는 메서드
             void GetCard(Hand hand)
             {
                 hand.GetCard(deck);
@@ -155,6 +169,7 @@
             }
         }
 
+        // 다시 시작을 도와주는 메서드
         private bool Retry()
         {
             Console.WriteLine();
@@ -169,6 +184,7 @@
 
         }
 
+        // 이 밑에있는 애들은 색깔 도우기용 메서드
         void Red()
         {
             Console.BackgroundColor = ConsoleColor.White;
@@ -185,6 +201,7 @@
             Console.ForegroundColor = ConsoleColor.Black;
         }
 
+        // 선택을 도우는 메서드
         bool Select()
         {
             Console.WriteLine();
@@ -201,7 +218,7 @@
         }
 
 
-
+        // 덱을 섞어주는 메서드
         class Deck
         {
            public List<string> cards { get; private set; }
@@ -227,6 +244,7 @@
             }
         }
 
+        // 각 플레이어들의 핸드 관리
         class Hand
         {
             public bool isBurst { get; private set; }
@@ -250,12 +268,15 @@
                 cards = new List<string>();
             }
 
+            // 랜덤한 카드를 받아오는 메서드
             public void GetCard(Deck deck)
             {
                 int a = rand.Next(0, deck.cards.Count);
                 cards.Add(deck.cards[a]);
                 deck.removeCard(a);
             }
+
+            // 점수 계산 메서드
             public void Score()
             {
                 score = 0;
@@ -273,6 +294,7 @@
                 SoftScore();
             }
 
+            // A가 있을 때 판정해주는 메서드
             public void SoftScore()
             {
                 softScore = 0;

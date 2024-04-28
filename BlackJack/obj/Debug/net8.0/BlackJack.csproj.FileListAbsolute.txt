@@ -12,3 +12,18 @@ C:\Users\gaega\Desktop\visual studio\Snake\BlackJack\obj\Debug\net8.0\refint\Bla
 C:\Users\gaega\Desktop\visual studio\Snake\BlackJack\obj\Debug\net8.0\BlackJack.pdb
 C:\Users\gaega\Desktop\visual studio\Snake\BlackJack\obj\Debug\net8.0\BlackJack.genruntimeconfig.cache
 C:\Users\gaega\Desktop\visual studio\Snake\BlackJack\obj\Debug\net8.0\ref\BlackJack.dll
+C:\Users\gaega\Github\SnakeGame\BlackJack\bin\Debug\net8.0\BlackJack.exe
+C:\Users\gaega\Github\SnakeGame\BlackJack\bin\Debug\net8.0\BlackJack.deps.json
+C:\Users\gaega\Github\SnakeGame\BlackJack\bin\Debug\net8.0\BlackJack.runtimeconfig.json
+C:\Users\gaega\Github\SnakeGame\BlackJack\bin\Debug\net8.0\BlackJack.dll
+C:\Users\gaega\Github\SnakeGame\BlackJack\bin\Debug\net8.0\BlackJack.pdb
+C:\Users\gaega\Github\SnakeGame\BlackJack\obj\Debug\net8.0\BlackJack.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gaega\Github\SnakeGame\BlackJack\obj\Debug\net8.0\BlackJack.AssemblyInfoInputs.cache
+C:\Users\gaega\Github\SnakeGame\BlackJack\obj\Debug\net8.0\BlackJack.AssemblyInfo.cs
+C:\Users\gaega\Github\SnakeGame\BlackJack\obj\Debug\net8.0\BlackJack.csproj.CoreCompileInputs.cache
+C:\Users\gaega\Github\SnakeGame\BlackJack\obj\Debug\net8.0\BlackJack.sourcelink.json
+C:\Users\gaega\Github\SnakeGame\BlackJack\obj\Debug\net8.0\BlackJack.dll
+C:\Users\gaega\Github\SnakeGame\BlackJack\obj\Debug\net8.0\refint\BlackJack.dll
+C:\Users\gaega\Github\SnakeGame\BlackJack\obj\Debug\net8.0\BlackJack.pdb
+C:\Users\gaega\Github\SnakeGame\BlackJack\obj\Debug\net8.0\BlackJack.genruntimeconfig.cache
+C:\Users\gaega\Github\SnakeGame\BlackJack\obj\Debug\net8.0\ref\BlackJack.dll
