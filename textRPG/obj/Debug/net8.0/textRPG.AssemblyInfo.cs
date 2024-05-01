@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("Snake")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("textRPG")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+87250ae5b73e33d8c7f63e400b7bf44b0ca35557")]
-[assembly: System.Reflection.AssemblyProductAttribute("Snake")]
-[assembly: System.Reflection.AssemblyTitleAttribute("Snake")]
+[assembly: System.Reflection.AssemblyProductAttribute("textRPG")]
+[assembly: System.Reflection.AssemblyTitleAttribute("textRPG")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // MSBuild WriteCodeFragment 클래스에서 생성되었습니다.

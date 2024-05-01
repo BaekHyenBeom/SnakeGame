@@ -1,0 +1,15 @@
+C:\Users\gaega\Github\SnakeGame\textRPG\bin\Debug\net8.0\textRPG.exe
+C:\Users\gaega\Github\SnakeGame\textRPG\bin\Debug\net8.0\textRPG.deps.json
+C:\Users\gaega\Github\SnakeGame\textRPG\bin\Debug\net8.0\textRPG.runtimeconfig.json
+C:\Users\gaega\Github\SnakeGame\textRPG\bin\Debug\net8.0\textRPG.dll
+C:\Users\gaega\Github\SnakeGame\textRPG\bin\Debug\net8.0\textRPG.pdb
+C:\Users\gaega\Github\SnakeGame\textRPG\obj\Debug\net8.0\textRPG.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gaega\Github\SnakeGame\textRPG\obj\Debug\net8.0\textRPG.AssemblyInfoInputs.cache
+C:\Users\gaega\Github\SnakeGame\textRPG\obj\Debug\net8.0\textRPG.AssemblyInfo.cs
+C:\Users\gaega\Github\SnakeGame\textRPG\obj\Debug\net8.0\textRPG.csproj.CoreCompileInputs.cache
+C:\Users\gaega\Github\SnakeGame\textRPG\obj\Debug\net8.0\textRPG.sourcelink.json
+C:\Users\gaega\Github\SnakeGame\textRPG\obj\Debug\net8.0\textRPG.dll
+C:\Users\gaega\Github\SnakeGame\textRPG\obj\Debug\net8.0\refint\textRPG.dll
+C:\Users\gaega\Github\SnakeGame\textRPG\obj\Debug\net8.0\textRPG.pdb
+C:\Users\gaega\Github\SnakeGame\textRPG\obj\Debug\net8.0\textRPG.genruntimeconfig.cache
+C:\Users\gaega\Github\SnakeGame\textRPG\obj\Debug\net8.0\ref\textRPG.dll
